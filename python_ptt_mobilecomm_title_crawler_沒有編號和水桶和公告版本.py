@@ -6,7 +6,7 @@ import os
 from requests.models import Response
 
 num=1
-with open('沒有編號和水桶版本.txt','w',encoding='utf-8') as t:
+with open('沒有編號和水桶和公告版本.txt','w',encoding='utf-8') as t:
     while num<=100:
         url = f'https://www.ptt.cc/bbs/MobileComm/index{num}.html'
         header={'referer': 'https://www.ptt.cc/bbs/index.html','user-agent': 'Mozilla/5.0'}
