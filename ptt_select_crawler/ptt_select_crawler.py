@@ -1,10 +1,18 @@
 #coding=utf-8
+from ssl import SSLErrorNumber
 import requests as re
 from bs4 import BeautifulSoup as bs
 import time 
-import os
 from requests.models import Response
-snum=eval(input('請輸入想要爬的頁數:'))
+
+tmp=(input('請輸入想要爬的頁數:'))
+def fun():
+    tmp=(input('請輸入想要爬的頁數:'))
+    return tmp
+while tmp.isdigit()==False:
+    tmp=fun()
+    
+snum=int(tmp)
 num=1
 filename=input('請輸入想要取的檔名:')
 with open(f'{filename}.txt','w',encoding='utf-8') as t:
